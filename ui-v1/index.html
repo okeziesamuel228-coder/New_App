@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cool Liquidity Vault - v1</title>
+    <script src="https://unpkg.com/@stacks/connect@latest/dist/connect.umd.js"></script>
+    <script src="https://unpkg.com/@stacks/transactions@latest/dist/transactions.umd.js"></script>
+    <script src="https://unpkg.com/@stacks/network@latest/dist/network.umd.js"></script>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <h1>Cool Liquidity Vault (v1)</h1>
+    <div id="auth">
+      <button id="connect">Connect Wallet</button>
+      <span id="addr"></span>
+    </div>
+
+    <fieldset>
+      <legend>Config</legend>
+      <label>Deployer address
+        <input id="deployer" placeholder="ST..." />
+      </label>
+      <label>Network (devnet by default)
+        <input id="api" placeholder="http://127.0.0.1:3999" value="http://127.0.0.1:3999" />
+      </label>
+    </fieldset>
+
+    <section>
+      <h2>Deposit initial (dx, dy)</h2>
+      <input id="dx0" type="number" placeholder="dx (token-a)" />
+      <input id="dy0" type="number" placeholder="dy (token-b)" />
+      <button id="btn-init">Deposit Initial</button>
+    </section>
+
+    <section>
+      <h2>Deposit balanced (dx, dy)</h2>
+      <input id="dx" type="number" placeholder="dx (token-a)" />
+      <input id="dy" type="number" placeholder="dy (token-b)" />
+      <button id="btn-deposit">Deposit</button>
+    </section>
+
+    <section>
+      <h2>Withdraw</h2>
+      <input id="burn" type="number" placeholder="LP shares to burn" />
+      <button id="btn-withdraw">Withdraw</button>
+    </section>
+
+    <pre id="log"></pre>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

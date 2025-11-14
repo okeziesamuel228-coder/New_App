@@ -1,0 +1,20 @@
+[project]
+name = "cool-liquidity-vault"
+authors = ["Emmanuel + Agent Mode"]
+description = "A unique Clarity protocol for depositing two-token liquidity with LP shares, tests, and UI"
+
+[contracts.token-a]
+path = "contracts/token-a.clar"
+clarity_version = 2
+epoch = "2.1"
+
+[contracts.token-b]
+path = "contracts/token-b.clar"
+clarity_version = 2
+epoch = "2.1"
+
+[contracts.liquidity-vault]
+path = "contracts/liquidity-vault.clar"
+clarity_version = 2
+epoch = "2.1"
+depends_on = ["token-a", "token-b"]
